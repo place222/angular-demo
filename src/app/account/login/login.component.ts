@@ -25,6 +25,8 @@ export class LoginComponent implements OnInit {
 
     onSubmit() {
         this.loginService.Authenticate(this.loginModel)
-            .subscribe(model => console.log(model));
+            .subscribe(model => {
+                this.router.navigate(['/admin']);
+            });
     }
 }
